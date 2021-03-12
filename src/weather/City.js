@@ -6,6 +6,7 @@ function City({city, index, onRemove, onShow}) {
     const attr = {'data-id': city.id}
     
     function removeThisCity(e) {
+		  e.stopPropagation();
         const city = e.target.parentElement.parentElement;
         const data_id = +city.dataset.id;
         
